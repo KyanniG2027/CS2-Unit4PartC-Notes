@@ -32,8 +32,21 @@ public class Main {
       seatingChart[3][4] = "Danny";
       seatingChart[3][5] = "Matthew";
 
+      // Shortcut: INITALIZIER LISTS
+      //use double curly brackets to set values 
+      // for a 20 array right away!
 
-
+      String[][] bingo = {
+                        {"!","A","11"} , 
+                        {"$","<3", ":)"} , 
+                        {",","20","x"}
+                         };
+      //Look at new array
+      System.out.println(bingo); // no built in toString
+      //have to use a loop or access indiviual items 
+      System.out.println(bingo[0][0] );
+      System.out.println(bingo[1][1]);
+      System.out.println(bingo[1][2]);
 
    }
 }
