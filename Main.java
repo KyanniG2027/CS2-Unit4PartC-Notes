@@ -48,5 +48,48 @@ public class Main {
       System.out.println(bingo[1][1]);
       System.out.println(bingo[1][2]);
 
+      //4.12 AD Array TRAVERSALS (loops)
+      // A row in a 2D array is just a 1D array
+      //when we loop, we go ROW first 
+      //then every COL in that row 
+
+      //ENCHANED FOR-EACH loops (nested)
+      //outer loop iterates through all ROWS 
+      for (String[] row : seatingChart) {
+         //for every col in that current row
+         for (String col : row){
+            System.out.println(col + " " );
+          }
+          System.out.println();
+
+    }
+    //remember that For-Each loops are only
+    //for visiting evert-item, not changing values
+
+    //STANDARD for loops requires tracking the index
+    //and knowing how many items in each row/col
+    //array.length provides # of ROWS in a 2D array
+    int numRows = seatingChart.length; //4
+    //array[0].length provie3w # of COLS
+    int numCols = seatingChart[0].length;
+    //seating chart of [0] is literally the first whole row 
+
+    //use this info in the standard for loop
+    for(int r = 0; r < seatingChart.length; r++ ) {
+      for( int c = 0; c < seatingChart[0].length; c++) {
+         System.out.print(seatingChart[r][c] + " " );
+         // can modify values in a standard for loop!
+         seatingChart[r][c] = "🪑" + seatingChart[r][c];
+         System.out.print(seatingChart[r][c] + " ");
+      }
+     
+      System.out.println(); // new line every row 
+    }
+
+ 
+   
+   
+   
    }
 }
+   
