@@ -87,9 +87,29 @@ public class Main {
     }
 
  
-   
-   
-   
-   }
-}
+      // CALL the two methods defined outside the main 
+      int[][] matrix = { {1,2,3} , {4,5,6} };
+      System.out.println(getRowTotal(0, matrix) );
+      System.out.println(getRowTotal(1, matrix) ); //second row
+
+  
+  
+  
+   } // ends main method
+
+   //definition method to count items in a specific row
+    public static int getRowTotal (int row, int[][] array) {
+      //prepare the return value 
+      int sum= 0;
+      //loop through the row 
+      for( int currentCol : array[row] ){
+         sum+= currentCol; 
+
+      }
+
+      return sum;
+
+    }
+
+} // ends class
    
